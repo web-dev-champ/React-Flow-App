@@ -1,70 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# React Flow Diagram Tool
 
-In the project directory, you can run:
+This project is a flow diagram tool built using `React Flow` that allows users to create and visualize flow diagrams with nodes and edges. It provides an interactive canvas where users can add custom nodes, create edges between nodes, and manipulate the flow structure visually.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **Interactive Flow Canvas**
+   - A drag-and-drop canvas built using `React Flow` that allows users to interact with nodes and edges.
+   - Users can drag nodes around the canvas to reposition them.
+   - Clicking on a node displays its properties in the sidebar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. **Add Custom Nodes**
+   - Users can create new nodes by providing:
+     - A custom label for the node.
+     - The `x` and `y` position coordinates where the node will be placed.
+   - Nodes are dynamically added to the flow with their specified properties.
 
-### `npm test`
+### 3. **Add Custom Edges**
+   - Users can create edges between nodes by specifying:
+     - The `source` node ID.
+     - The `target` node ID.
+   - Edges represent connections between nodes and allow users to illustrate relationships or sequences.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. **View Node Properties**
+   - Selecting a node displays detailed information about it in the sidebar, including:
+     - Node `ID`.
+     - Node position (`x` and `y` coordinates).
+     - Node type (e.g., input, default).
+   - This feature helps users understand the structure and relationships between nodes.
 
-### `npm run build`
+### 5. **Flow Controls**
+   - Includes built-in controls such as:
+     - **MiniMap**: Provides a small overview of the entire flow, allowing users to quickly navigate larger diagrams.
+     - **Controls**: Includes zoom-in, zoom-out, and fit-to-view options.
+     - **Background**: A customizable background grid with line variants for better visualization of node placements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 6. **Cursor Customization**
+   - The cursor style can be adjusted dynamically to enhance the user experience while interacting with the canvas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 7. **Automatic ID Display**
+   - Each node displays its `ID` along with its label, making it easier to identify nodes when creating edges.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **React**: Front-end library for building user interfaces.
+- **React Flow**: Library for building node-based UIs and flow diagrams.
+- **JavaScript**: Core language for implementing logic.
+- **CSS**: Custom styling to enhance the look and feel of the tool.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/react-flow-diagram-tool.git
+   cd react-flow-diagram-tool
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Open in your browser:**
+   - Visit `http://localhost:3000` to interact with the flow diagram tool.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+- `src/FlowCanvas.js`: Main component that renders the flow canvas and manages nodes, edges, and interactions.
+- `src/FlowCanvas.css`: Custom CSS for styling tooltips, nodes, and the overall layout.
+- `src/index.js`: Entry point for the React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+- Use the **Create a New Node** section to add custom nodes by specifying a label and position.
+- Use the **Create a New Edge** section to connect nodes by specifying source and target node IDs.
+- Drag and drop nodes on the canvas to rearrange them.
+- Click on nodes to view their details in the sidebar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Improvements
 
-### Making a Progressive Web App
+- **Undo/Redo Functionality**: Add the ability to undo and redo changes made to the flow.
+- **Export/Import Feature**: Allow users to save the current flow as JSON and load it later.
+- **Custom Node Types**: Enable users to create nodes with custom shapes and styles.
+- **Advanced Styling**: Improve the user interface with additional styling options for nodes and edges.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Feel free to open issues or submit pull requests if you have suggestions or improvements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or feedback, please contact [srijansen201@gmail.com].
+---
